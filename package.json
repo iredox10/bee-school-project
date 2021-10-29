@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "dev": "npx nodemon index",
-    "tailwind:css": "tailwind build public/tailwind/tailwind.css -o public/tailwind/style.css",
-    "start": "node index.js"
+    "tailwind:css": "tailwind build public/tailwind/tailwind.css -o public/tailwind/style.css"
   },
   "author": "",
   "license": "ISC",

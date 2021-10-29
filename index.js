@@ -16,7 +16,7 @@ app.set('view engine', 'ejs')
 app.use(routes)
 
 mongoose
-	.connect(process.env.DB_URL || 'mongodb://localhost/bee-project')
+	.connect(process.env.DB_URL )
 	.then((result) => app.listen(process.env.PORT || 5000))
 	.catch((err) => console.log(err));
 
