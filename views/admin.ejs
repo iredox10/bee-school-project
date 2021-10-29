@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/header.ejs') %> 
+<body>
+    <%- include('./partials/nav.ejs') %> 
+    <div class="container capitalize text-center ">
+        <h1 class="text-3xl font-bold text-center">admin page</h1>
+        <div class="cards md:flex justify-between gap-4 my-6">
+
+            <div class="add-staff  rounded-sm w-full">
+                <div class="card-header shadow">
+                    <h1>add staff</h1>
+                </div>
+                <div class="card-content p-3 border-2 rounded-b-md bg-yellow-500">
+                    <a href="/add-staff">
+                    <p class="hover:text-blue-600">add staff your here</p>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="add-staff  rounded-sm w-full">
+                <div class="card-header shadow">
+                    <h1>view staffs</h1>
+                </div>
+                <div class="card-content p-3 border-2 rounded-b-md bg-yellow-500">
+                    <a href="/view-staff">
+                    <p class="hover:text-blue-600">view staff here</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="add-staff  rounded-sm w-full">
+                <div class="card-header shadow">
+                    <h1>add staff</h1>
+                </div>
+                <div class="card-content p-3 border-2 rounded-b-md bg-yellow-500">
+                    <a href="/leave-staffs">
+                    <p>view leave staff</p>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

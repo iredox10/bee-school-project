@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn {
+    @apply p-2 rounded-md capitalize cursor-pointer;
+}
+
+.btn-green {
+    @apply bg-green-600 text-white
+}
+
+.container {
+    @apply max-w-4xl mx-auto my-4 capitalize p-5
+}
+
+span {
+    @apply font-bold mr-2
+}
+
+.input{
+    @apply p-2 border-2 rounded-md capitalize w-full
+}
+
+label{
+    @apply block font-bold mb-2
+}
+
+.heading{
+    @apply text-center capitalize font-bold text-2xl
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %> 
+<body>
+    <%- include('./partials/nav.ejs') %> 
+    <h1 class="head capitalize bg-yellow-400 p-4 text-white flex justify-between font-bold md:text-2xl"><%= staff.firstName %> <%= staff.surName %> leave detail</h1>
+    <div class="container">
+        <p><span>full name:</span><%= staff.firstName %> <%= staff.surName %> <%= staff.lastName %></p>
+        <p><span>staff id:</span><%= staff.staffId.toUpperCase() %> </p>
+        <div class="reason my-5">
+            <p class="my-2"><span>leave reason:</span><%= staff.reason %> </p>
+            <p><span>date of leave:</span><%= staff.date %> </p>
+        </div>
+        <form action="/leave-detail/<%= staff.id %>?_method=PATCH" method="POST" class="mt-5">
+            <p><span>accept/decline</span>
+                <!-- <input type="text" name="accept" id="accept" class="input" value="<%# staff.accept %> "> -->
+                <select name="accept" id="accept" class="input">
+                    <option value="accept">accept</option>
+                    <option value="decline">decline</option>
+                </select>
+            </p>
+            <button class="btn bg-yellow-400 font-medium block my-3 hover:text-white px-10">sign</button>
+        </form>
+    </div>
+</body>
+</html>

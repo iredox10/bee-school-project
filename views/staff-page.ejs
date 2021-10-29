@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/header.ejs') %> 
+<body>
+    <%- include('./partials/nav.ejs') %> 
+</body>
+    <div class="head capitalize bg-yellow-400 p-4 text-white flex justify-between font-bold md:text-2xl">
+        <h1>welcome <%= staff.firstName %> <%= staff.lastName %>  </h1>
+        <h1><%= staff.staffId %> </h1>
+    </div>
+    <a href="/" class="btn btn-yellow absolute bottom-2 right-1 hover:bg-yellow-400 transition ease-in">log out</a>
+    <div class="container">
+        <div class="info  justify-between">
+        <p><span>firstname: </span> <%= staff.firstName %>  </p>
+        <p><span>lastname: </span> <%= staff.lastName %>  </p>
+        <p><span>surname: </span> <%= staff.surName %>  </p>
+        <p><span>department: </span> <%= staff.department %>  </p>
+        <p><span>leave status: </span> <%= staff.accept %>   </p>
+        </div>
+        <div class="leave">
+            <a href="/leave/<%= staff.id %>" class="btn bg-yellow-500 inline-block mt-2 text-white hover:text-black hover:bg-yellow-800">take a leave</a>
+        </div>
+    </div>
+
+
+</html>

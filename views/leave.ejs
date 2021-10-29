@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %> 
+<body>
+    <%- include('./partials/nav.ejs') %> 
+    <div class="head capitalize bg-yellow-400 p-4 text-white flex justify-between font-bold md:text-2xl">
+        <h1><%= staff.firstName %>
+                <%= staff.lastName %>
+                write a leave letter
+        </h1>
+        <h1>
+            <%= staff.staffId %>
+        </h1>
+    </div>
+    <div class="container">
+        <form action="/leave/<%= staff.id %>?_method=PATCH" method="POST">
+           <div  class="my-2">
+            <label for="fullName">fullName</label>
+            <input type="text" name="fullName" id="fullName" class="input" value="<%= staff.firstName %> <%= staff.lastName %>">
+            </div>
+            <div class="my-2">
+                <label for="reason">reason</label>
+                <textarea name="reason" id="reason" cols="30" rows="10" class="input"></textarea>
+            </div>
+            <div class="my-2">
+                <label for="date">date</label>
+                <input type="date" name="date" id="date" class="input">
+            </div>
+            <button class="btn bg-yellow-500 hover:text-white">send letter</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %> 
+<body>
+    <%- include('./partials/nav.ejs') %> 
+    <div class="container">
+        <h1 class="heading">add staff</h1>
+        <form action="/add-staff" method="POST">
+        <div class="f-name my-2">
+            <label for="firstName" class="block font-bold mb-2">firstName</label>
+            <input type="text" name="firstName" id="firstName" class="input">
+        </div>
+        <div class="l-name my-2">
+            <label for="lastName" class="block font-bold mb-2">last name</label>
+            <input type="text" name="lastName" id="lastName" class="input">
+        </div>
+
+        <div class="my-2">
+            <label for="surname">surname</label>
+            <input type="text" name="surName" id="surName" class="input">
+        </div>
+        <div class="my-2">
+            <label for="staff-id">staff id</label>
+            <input type="text" name="staffId" id="staffId" class="input">
+        </div>
+        <div class="my-2">
+            <label for="department">department</label>
+            <input type="text" name="department" id="department" class="input">
+        </div>
+        <div class="my-2">
+            <label for="password">assign password</label>
+            <input type="password" name="password" id="password" class="input">
+        </div>
+        <button class="btn bg-yellow-500 w-full hover:bg-yellow-900">add staff</button>
+        </form>
+    </div>
+</body>
+</html>

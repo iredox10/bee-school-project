@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/header.ejs') %> 
+<body>
+    <%- include('./partials/nav.ejs') %> 
+</body>
+    <div class="container">
+    <h1 class="heading">log in</h1>
+    <form action="/log-in" method="POST">
+        <div class="my-2">
+            <label for="staffId">staff id</label>
+            <input type="text" name="staffId" id="staffId" class="input">
+        </div>
+        <div class="my-2">
+            <label for="password">password</label>
+            <input type="password" name="password" id="password" class="input">
+        </div>
+        <button class="btn bg-yellow-500 hover:bg-yellow-900 w-full">log in</button>
+    </form>
+    </div>
+</html>

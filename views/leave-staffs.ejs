@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %> 
+<body>
+    <%- include('./partials/nav.ejs') %> 
+    <h1 class="head capitalize bg-yellow-400 p-4 text-white font-bold md:text-2xl">leave staff page</h1>
+    <div class="container">
+        <% staffs.forEach(staff=>{ %>
+                <% if(staff.reason != null ){ %>
+                    <table class="w-full text-center my-3">
+                        <tr>
+                            <th  class="bg-yellow-900 border-r-2 text-white p-2">full name</th>
+                            <th  class="bg-yellow-900 border-r-2 text-white p-2">staff number</th>
+                            <th  class="bg-yellow-900 border-r-2 text-white p-2">status</th>
+                            <th  class="bg-yellow-900 border-r-2 text-white p-2">full detail</th>
+                        </tr>
+                        <tr>
+                            <td class="bg-gray-400 text-white p-2"><%= staff.firstName %> <%= staff.lastName %>  </td>
+                            <td class="bg-gray-400 text-white p-2"><%= staff.staffId %> </td>
+                            <td class="bg-gray-400 text-white p-2 font-semibold"><%= staff.accept %> </td>
+                            <td class="bg-gray-400 text-white p-2"><a href="/leave-detail/<%= staff.id %>" class="btn bg-yellow-600 hover:bg-yellow-200 hover:text-white w-full" >full detail</a></td>
+                        </tr>
+                    </table>
+               <% } %> 
+            <%}) %>
+    </div>
+</body>
+</html>

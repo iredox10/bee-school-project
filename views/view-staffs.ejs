@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %> 
+<body>
+    <%- include('./partials/nav.ejs') %> 
+</body>
+    <div class="container">
+        <h1 class="heading">staffs records</h1>
+        <div class= mt-5">
+    <% staffs.forEach(staff=>{ %>
+        <table class="my-3">
+            <tr>
+                <th class="bg-green-900 border-r-2 text-white p-2">first name</th>
+                <th class="bg-green-900 border-r-2 text-white p-2">last name</th>
+                <th class="bg-green-900 border-r-2 text-white p-2">surname</th>
+                <th class="bg-green-900 border-r-2 text-white p-2">staff id</th>
+                <th class="bg-green-900 border-r-2 text-white p-2">department</th>
+                <th class="bg-green-900 border-r-2 text-white p-2">password</th>
+                <th class="bg-green-900 border-r-2 text-white p-2">delete</th>
+            </tr>
+            <tr class="bg-gray-400 text-white p-2">
+                <td class="p-2 border-r-2">
+                    <%= staff.firstName %>
+                </td>
+                <td class="p-2 border-r-2">
+                    <%= staff.lastName %>
+                </td>
+                <td class="p-2 border-r-2">
+                    <%= staff.surName%>
+                </td>
+                <td class="p-2 border-r-2">
+                    <%= staff.staffId%>
+                </td class="p-2 border-r-2">
+                <td class="p-2 border-r-2">
+                    <%= staff.department%>
+                </td>
+                <td class="p-2 border-r-2"><%= staff.password %> </td>
+                <td class="p-2">
+                    <form action="/delete/<%= staff.id %>?_method=DELETE" method="POST">
+                    <button class="btn bg-red-600 hover:bg-red-900">delete</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <%}) %>
+        </div>
+    </div>
+</html>
