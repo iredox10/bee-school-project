@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const routes = require('./routes/routes')
 const ejs  = require('ejs')
 const methodOverride = require('method-override')
+require('dotenv').config()
 // const cookieParser = require('cookie-parser')
 
 // middlewares
@@ -15,9 +16,8 @@ app.set('view engine', 'ejs')
 app.use(routes)
 
 mongoose
-	.connect(process.env.DB_URL|| 'mongodb://localhost/bee-project' )
-	.then((result) =>console.log('connect') )
+	.connect(process.env.DB_URL || 'mongodb://localhost/bee-project')
+	.then((result) => app.listen(process.env.PORT || 5000))
 	.catch((err) => console.log(err));
 
 
-app.listen(process.env.PORT || 5000)
